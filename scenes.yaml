@@ -1,0 +1,76 @@
+- id: a53eMORNING
+  name: morning
+  entities:
+    light.kitchen_lights:
+      brightness: 255
+      color_temp: 154 
+      state: on
+    light.bedroom:
+      brightness: 255 
+      color_temp: 154
+      state: on
+    light.livingroom_lights:
+      brightness: 255
+      color_temp: 153
+      state: on
+    group.floodlights: on
+
+- id: a53eDAY
+  name: day
+  entities:
+    light.kitchen_lights:
+      brightness: 255
+      color_temp: 154 
+      state: on
+    light.bedroom:
+      brightness: 255 
+      color_temp: 154
+      state: on
+    light.livingroom_lights:
+      brightness: 255
+      color_temp: 153
+      state: on
+    group.floodlights: off
+  
+- id: a53eAFTERNOON
+  name: afternoon
+  entities:
+    light.kitchen_lights:
+      brightness: 255
+      color_temp: 370
+      state: on
+    light.bedroom:
+      brightness: 255 
+      color_temp: 370
+      state: on
+    light.livingroom_lights:
+      brightness: 255
+      color_temp: 500
+      state: on
+    group.floodlights: off
+
+- id: a53eEVENING
+  name: evening
+  entities:
+    light.kitchen_lights:
+      brightness: 1
+      color_temp: 370
+      state: on
+    light.bedroom:
+      brightness: 1
+      color_temp: 370
+      state: on
+    light.livingroom_lights:
+      brightness: 100
+      color_temp: 500
+      state: on
+    group.floodlights: off
+  
+- id: a53eNIGHT
+  name: night
+  entities:
+    light.kitchen_lights: off
+    light.bedroom: off
+    light.livingroom_lights: off
+    group.floodlights: off
+ 

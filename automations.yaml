@@ -1,0 +1,119 @@
+- id: j38aWAKEUP
+  alias: Wake up
+  trigger:
+    - platform: time
+      at: "06:30:00"
+  variables:
+    delay: 600 
+  action:
+    - scene: scene.night
+    - delay: 3
+    - service: light.turn_on
+      target:
+        entity_id:
+          - light.kitchen_lights
+      data:
+        brightness: 255
+        color_temp: 154
+    - service: light.turn_on
+      target:
+        entity_id:
+          - light.livingroom_lights
+      data:
+        brightness: 255
+        rgb_color: [255,0,0]
+    - delay: "{{ delay }}"
+    - service: light.turn_on
+      target:
+        entity_id:
+          - light.livingroom_lights
+      data:
+        brightness: 150 
+        color_temp: 500 
+    - delay: "{{ delay }}"
+    - service: light.turn_on
+      target:
+        entity_id:
+          - light.livingroom_lights
+      data:
+        brightness: 255 
+        color_temp: 500
+    - delay: "{{ delay }}"
+    - service: light.turn_on
+      target:
+        entity_id:
+          - light.livingroom_lights
+      data:
+        brightness: 255 
+        color_temp: 153 
+    - delay: "{{ delay }}"
+    - scene: scene.morning
+    - delay: "{{ delay*2 }}"
+    - scene: scene.morning
+    - delay: "{{ delay*2 }}"
+    - scene: scene.morning
+    - delay: "{{ delay*2 }}"
+    - scene: scene.morning
+    - delay: "{{ delay*2 }}"
+    - scene: scene.morning
+    - delay: "{{ delay*2 }}"
+    - scene: scene.morning
+    - delay: "{{ delay*2 }}"
+    - scene: scene.morning
+
+- id: j38aFLOODSOFF
+  alias: Floods Off
+  trigger:
+    - platform: time
+      at: "11:00:00"
+  action:
+    - scene: scene.day  
+
+- id: j38aWINDDOWN
+  alias: Wind down
+  trigger:
+    - platform: time
+      at: "16:30:00"
+  variables:
+    delay: 3600
+  action:
+    - scene: scene.afternoon
+    - delay: "{{ delay }}"
+    - scene: scene.evening
+    - delay: "{{ delay }}"
+    - service: light.turn_off
+      target:
+        entity_id:
+          - light.kitchen1
+          - light.livingroom1
+    - delay: "{{ delay }}"
+    - service: light.turn_off
+      target:
+        entity_id:
+          - light.kitchen2
+          - light.bedroom
+    - delay: "{{ delay*2 }}"
+    - service: light.turn_off
+      target:
+        entity_id:
+          - light.kitchen3
+          - light.livingroom2
+    - delay: "{{ delay }}"
+    - scene: scene.night
+    - delay: "{{ delay }}"
+    - scene: scene.night
+    - delay: "{{ delay }}"
+    - scene: scene.night
+    - delay: "{{ delay }}"
+    - scene: scene.night
+    - delay: "{{ delay }}"
+    - scene: scene.night
+    - delay: "{{ delay }}"
+    - scene: scene.night
+
+
+
+
+
+
+

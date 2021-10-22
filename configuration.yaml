@@ -1,0 +1,28 @@
+light:
+  - platform: group
+    name: livingroom_lights
+    entities:
+      - light.livingroom1
+      - light.livingroom2
+      - light.livingroom3
+      - light.hallway
+  - platform: group
+    name: kitchen_lights
+    entities:
+      - light.kitchen1
+      - light.kitchen2
+      - light.kitchen3
+      - light.kitchen4
+
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
