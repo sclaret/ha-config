@@ -5,7 +5,7 @@
     - platform: time
       at: "06:30:00"
   variables:
-    delay: 600 
+    delay: 600
   action:
     - scene: scene.night
     - delay: 3
@@ -13,17 +13,19 @@
       target:
         entity_id:
           - light.kitchen_lights
-      data:
-        brightness: 255
-        color_temp: 154
-    - service: light.turn_on
-      target:
-        entity_id:
           - light.livingroom_lights
       data:
         brightness: 255
         rgb_color: [255,0,0]
     - delay: "{{ delay }}"
+
+    - service: light.turn_on
+      target:
+        entity_id:
+          - light.kitchen_lights
+      data:
+        brightness: 25 
+        color_temp: 370 
     - service: light.turn_on
       target:
         entity_id:
@@ -32,6 +34,14 @@
         brightness: 150 
         color_temp: 500 
     - delay: "{{ delay }}"
+
+    - service: light.turn_on
+      target:
+        entity_id:
+          - light.kitchen_lights
+      data:
+        brightness: 255 
+        color_temp: 370
     - service: light.turn_on
       target:
         entity_id:
@@ -40,26 +50,35 @@
         brightness: 255 
         color_temp: 500
     - delay: "{{ delay }}"
+
     - service: light.turn_on
       target:
         entity_id:
+          - light.kitchen_lights
           - light.livingroom_lights
       data:
         brightness: 255 
-        color_temp: 153 
+        color_temp: 154 
     - delay: "{{ delay }}"
+
     - scene: scene.day
     - delay: "{{ delay*2 }}"
+
     - scene: scene.day
     - delay: "{{ delay*2 }}"
+
     - scene: scene.day
     - delay: "{{ delay*2 }}"
+
     - scene: scene.day
     - delay: "{{ delay*2 }}"
+
     - scene: scene.day
     - delay: "{{ delay*2 }}"
+
     - scene: scene.day
     - delay: "{{ delay*2 }}"
+
     - scene: scene.day
 
 - id: j38aFLOODSOFF
