@@ -1,20 +1,3 @@
-- id: a53eMORNING
-  name: morning
-  entities:
-    light.kitchen_lights:
-      brightness: 255
-      color_temp: 154 
-      state: on
-    light.bedroom:
-      brightness: 255 
-      color_temp: 154
-      state: on
-    light.livingroom_lights:
-      brightness: 255
-      color_temp: 153
-      state: on
-    group.floodlights: on
-
 - id: a53eDAY
   name: day
   entities:
@@ -30,7 +13,7 @@
       brightness: 255
       color_temp: 153
       state: on
-    group.floodlights: off
+    group.floodlights: on
   
 - id: a53eAFTERNOON
   name: afternoon

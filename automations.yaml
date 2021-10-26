@@ -47,25 +47,25 @@
         brightness: 255 
         color_temp: 153 
     - delay: "{{ delay }}"
-    - scene: scene.morning
+    - scene: scene.day
     - delay: "{{ delay*2 }}"
-    - scene: scene.morning
+    - scene: scene.day
     - delay: "{{ delay*2 }}"
-    - scene: scene.morning
+    - scene: scene.day
     - delay: "{{ delay*2 }}"
-    - scene: scene.morning
+    - scene: scene.day
     - delay: "{{ delay*2 }}"
-    - scene: scene.morning
+    - scene: scene.day
     - delay: "{{ delay*2 }}"
-    - scene: scene.morning
+    - scene: scene.day
     - delay: "{{ delay*2 }}"
-    - scene: scene.morning
+    - scene: scene.day
 
 - id: j38aFLOODSOFF
   alias: Floods Off
   trigger:
     - platform: time
-      at: "11:00:00"
+      at: "15:00:00"
   action:
     - scene: scene.day  
 

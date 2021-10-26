@@ -2,4 +2,3 @@ floodlights:
   name: Floodlights
   entities:
     - switch.kitchen_flood
-    - switch.livingroom_flood
