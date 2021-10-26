@@ -81,57 +81,67 @@
 
     - scene: scene.day
 
-- id: j38aFLOODSOFF
-  alias: Floods Off
-  mode: restart
-  trigger:
-    - platform: time
-      at: "15:00:00"
-  action:
-    - scene: scene.day  
-
 - id: j38aWINDDOWN
   alias: Wind down
   mode: restart
   trigger:
     - platform: time
-      at: "16:30:00"
+      at: "15:00:00"
   variables:
     delay: 3600
   action:
     - scene: scene.afternoon
-    - delay: "{{ delay }}"
+    - delay: "{{ delay*2 }}"
+
     - scene: scene.evening
     - delay: "{{ delay }}"
+
+    - scene: scene.night
+    - delay: "{{ delay }}"
+
     - service: light.turn_off
       target:
         entity_id:
           - light.kitchen1
           - light.livingroom1
     - delay: "{{ delay }}"
+
     - service: light.turn_off
       target:
         entity_id:
           - light.kitchen2
           - light.bedroom
-    - delay: "{{ delay*2 }}"
+    - delay: "{{ delay }}"
+
     - service: light.turn_off
       target:
         entity_id:
           - light.kitchen3
           - light.livingroom2
     - delay: "{{ delay }}"
-    - scene: scene.night
+
+    - service: light.turn_off
+      target:
+        entity_id:
+          - light.hallway
     - delay: "{{ delay }}"
-    - scene: scene.night
+
+    - scene: scene.latenight
     - delay: "{{ delay }}"
-    - scene: scene.night
+
+    - scene: scene.latenight
     - delay: "{{ delay }}"
-    - scene: scene.night
+
+    - scene: scene.latenight
     - delay: "{{ delay }}"
-    - scene: scene.night
+
+    - scene: scene.latenight
     - delay: "{{ delay }}"
-    - scene: scene.night
+
+    - scene: scene.latenight
+    - delay: "{{ delay }}"
+
+    - scene: scene.latenight
 
 
 

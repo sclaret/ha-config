@@ -19,21 +19,38 @@
   name: afternoon
   entities:
     light.kitchen_lights:
-      brightness: 255
-      color_temp: 370
+      brightness: 100
+      color_temp: 250 
       state: on
     light.bedroom:
-      brightness: 255 
-      color_temp: 370
+      brightness: 100 
+      color_temp: 250
       state: on
     light.livingroom_lights:
-      brightness: 255
-      color_temp: 500
+      brightness: 200
+      color_temp: 300
       state: on
     group.floodlights: off
 
 - id: a53eEVENING
   name: evening
+  entities:
+    light.kitchen_lights:
+      brightness: 50
+      color_temp: 370
+      state: on
+    light.bedroom:
+      brightness: 50
+      color_temp: 370
+      state: on
+    light.livingroom_lights:
+      brightness: 150
+      color_temp: 500
+      state: on
+    group.floodlights: off
+
+- id: a53eNIGHT
+  name: night
   entities:
     light.kitchen_lights:
       brightness: 1
@@ -44,13 +61,13 @@
       color_temp: 370
       state: on
     light.livingroom_lights:
-      brightness: 100
+      brightness: 50
       color_temp: 500
       state: on
     group.floodlights: off
   
-- id: a53eNIGHT
-  name: night
+- id: a53eLATENIGHT
+  name: latenight
   entities:
     light.kitchen_lights: off
     light.bedroom: off
