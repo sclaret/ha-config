@@ -3,11 +3,14 @@
   mode: restart
   trigger:
     - platform: time
-      at: "06:30:00"
+      at: "06:15:00"
   variables:
     delay: 600
   action:
-    - scene: scene.night
+    - condition: state
+      entity_id: light.livingroom1
+      state: 'on'
+    - scene: scene.latenight
     - delay: 3
     - service: light.turn_on
       target:
@@ -90,6 +93,9 @@
   variables:
     delay: 3600
   action:
+    - condition: state
+      entity_id: switch.kitchen_flood
+      state: 'on'
     - scene: scene.afternoon
     - delay: "{{ delay*2 }}"
 
