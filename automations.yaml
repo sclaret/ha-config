@@ -9,7 +9,7 @@
   action:
     - condition: state
       entity_id: light.livingroom1
-      state: 'on'
+      state: 'off'
     - scene: scene.latenight
     - delay: 3
     - service: light.turn_on
