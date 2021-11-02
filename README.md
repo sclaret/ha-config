@@ -13,6 +13,14 @@ git push --set-upstream origin master
 ```
 
 
+# Gotchas
+
+```
+Unexpected intent IDs break reference in automation:
+scene.lateevening_2
+```
+
+
 # Built-in Config
 
 [https://www.home-assistant.io/integrations/light/](https://www.home-assistant.io/integrations/light/)
