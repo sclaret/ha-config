@@ -36,7 +36,7 @@
       data:
         brightness: 150 
         color_temp: 500 
-    - delay: "{{ delay }}"
+    - delay: "{{ delay*2 }}"
 
     - service: light.turn_on
       target:
@@ -52,7 +52,7 @@
       data:
         brightness: 255 
         color_temp: 500
-    - delay: "{{ delay }}"
+    - delay: "{{ delay*2 }}"
 
     - service: light.turn_on
       target:
@@ -62,7 +62,7 @@
       data:
         brightness: 255 
         color_temp: 154 
-    - delay: "{{ delay }}"
+    - delay: "{{ delay*2 }}"
 
     - scene: scene.day
     - delay: "{{ delay*2 }}"
